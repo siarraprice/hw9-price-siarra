@@ -1,14 +1,15 @@
 var accordionheaders = document.querySelectorAll("#accordion .accordion-headers");
+var accordionDescriptions = document.querySelectorAll("#accordion .accordion-description");
 
 // handles the accordion dropdown action
 function expandAccordionDescription() {
 
-
-  // handles the toggle indicator 
+  // handles the toggle indicator
   for (i = 0; i < accordionheaders.length; i++) {
     accordionheaders[i].childNodes[3].innerHTML = '+';
   }
-
+  
+  this.nextElementSibling.classList.add('accordion-open');
   this.childNodes[3].innerHTML = '-';
 };
 
