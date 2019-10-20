@@ -7,10 +7,12 @@ function expandAccordionDescription() {
   // handles the toggle indicator
   for (i = 0; i < accordionheaders.length; i++) {
     accordionheaders[i].childNodes[3].innerHTML = '+';
+    accordionDescriptions[i].classList.remove('accordion-open');
   }
-  
-  this.nextElementSibling.classList.add('accordion-open');
+
+  this.nextElementSibling.classList.toggle('accordion-open');
   this.childNodes[3].innerHTML = '-';
+
 };
 
 // add click event listener for accordion headers
